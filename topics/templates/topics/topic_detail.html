@@ -1,0 +1,16 @@
+<!-- topics/templates/topics/topic_detail.html -->
+
+{% extends "base.html" %}
+
+{% block page_content %}
+<h1 >{{ topic.title }}</h1>
+<div class="row">
+    <div class="col-md-4">
+        <h5>About the Course:</h5>
+        <p>{{ topic.description }}</p>
+        <br>
+        <h5>Duration:</h5>
+        <p>{{ topic.duration }}</p>
+    </div>
+</div>
+{% endblock page_content %}

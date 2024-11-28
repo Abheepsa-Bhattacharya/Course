@@ -1,0 +1,20 @@
+body {
+    background: linear-gradient(to bottom, #fcfbfb, #a3a7f6);
+  } 
+  
+  .card {
+    color: #4cd137;
+    border: 100; 
+    border-color: rgb(193, 185, 241);
+  }
+  
+  .btn {
+    background: linear-gradient(to bottom, #390475, #a80be1);
+    color: #fff;
+    border: none;
+  }
+  
+  .heading {
+    color:#4cd137;
+  }
+

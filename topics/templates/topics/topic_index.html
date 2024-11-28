@@ -1,0 +1,26 @@
+<!-- topics/templates/topics/topic_index.html -->
+
+{% extends "base.html" %}
+
+{% block page_content %}
+<h1 style="font-family:'Times New Roman', Times, serif;color: rgb(4, 5, 38);">Available Courses</h1>
+<div class="row">
+{% for topic in topics %}
+    <div class="col-md-4">
+        <div class="card mb-2">
+            {% if topic.image %}
+                <img class="card-img-top" src="{{ topic.image.url }}" alt="">
+            {% endif %}
+            <div class="card-body">
+                <h5 class="card-title" style="color: #252478; font-weight: 700; font-family: 'Times New Roman', Times, serif; font-size:x-large;">{{ topic.title }}</h5>
+                <p class="card-text" style="color: rgb(56, 53, 53);">{{ topic.description }}</p>
+                <a href="{% url 'topic_detail' topic.pk %}"
+                   class="btn btn-primary">
+                    Read More
+                </a>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}
